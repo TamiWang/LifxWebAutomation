@@ -5,7 +5,7 @@
     <listener class-name="automation.listeners"/>
     <listener class-name="resources.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="Test">
+  <test name="Test">
     <classes>
       <class name="automation.HomePageTest"/>
     </classes>
