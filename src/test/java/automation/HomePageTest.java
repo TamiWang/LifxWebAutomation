@@ -84,7 +84,8 @@ public class HomePageTest extends Base{
         // Move back to "shop" button to check next element - Lightbulbs
         a.moveToElement(hp.getShop()).build().perform();
 		a.moveToElement(hp.getGeneral()).build().perform();
-
+		
+		Thread.sleep(1000);
         String actualLight = hp.getLightbulbs().getText();
         String expectedLight = "Lightbulbs";
         AssertJUnit.assertEquals(actualLight, expectedLight);
