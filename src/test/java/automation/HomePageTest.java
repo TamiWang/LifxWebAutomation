@@ -1,7 +1,6 @@
 package automation;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.apache.logging.log4j.LogManager;
@@ -59,7 +58,7 @@ public class HomePageTest extends Base{
 	@Test
 	public void shop() {
 		a.moveToElement(hp.getShop()).click().build().perform();
-        AssertJUnit.assertTrue(hp.getValid().isDisplayed());
+        Assert.assertTrue(hp.getValid().isDisplayed());
         log.info("Shop page is displayed");
         // Back to home page
         hp.getLogoLifx().click();
@@ -74,9 +73,9 @@ public class HomePageTest extends Base{
 		// Since "general light" button becomes visible, validate and click it
 		String actualGeneral = hp.getGeneral().getText();
 		String expectedGeneral = "General Lighting";
-        AssertJUnit.assertEquals(actualGeneral, expectedGeneral);
+        Assert.assertEquals(actualGeneral, expectedGeneral);
         hp.getGeneral().click();
-        AssertJUnit.assertTrue(hp.getValid().isDisplayed());
+        Assert.assertTrue(hp.getValid().isDisplayed());
         log.info("General Lighting page is displayed");
         
         Thread.sleep(1000);
@@ -88,9 +87,9 @@ public class HomePageTest extends Base{
 		Thread.sleep(1000);
         String actualLight = hp.getLightbulbs().getText();
         String expectedLight = "Lightbulbs";
-        AssertJUnit.assertEquals(actualLight, expectedLight);
+        Assert.assertEquals(actualLight, expectedLight);
         hp.getLightbulbs().click();
-        AssertJUnit.assertTrue(hp.getTitle().isDisplayed());
+        Assert.assertTrue(hp.getTitle().isDisplayed());
         log.info("Lightbulbs page is displayed");
         
         Thread.sleep(1000);
@@ -101,9 +100,9 @@ public class HomePageTest extends Base{
 		
 		String actualDownlight = hp.getDownlight().getText();
 		String expectedDownlights = "Downlights";
-		AssertJUnit.assertEquals(actualDownlight, expectedDownlights);
+		Assert.assertEquals(actualDownlight, expectedDownlights);
 		hp.getDownlight().click();
-		AssertJUnit.assertTrue(hp.getTitle().isDisplayed());
+		Assert.assertTrue(hp.getTitle().isDisplayed());
         log.info("Downlights page is displayed");
 		
 		Thread.sleep(1000);
@@ -114,9 +113,9 @@ public class HomePageTest extends Base{
 		
 		String actualOutdoor = hp.getOutdoor().getText();
 		String expectedOutdoor = "Outdoor";
-		AssertJUnit.assertEquals(actualOutdoor, expectedOutdoor);
+		Assert.assertEquals(actualOutdoor, expectedOutdoor);
 		hp.getOutdoor().click();
-		AssertJUnit.assertTrue(hp.getTitle().isDisplayed());
+		Assert.assertTrue(hp.getTitle().isDisplayed());
         log.info("Outdoor page is displayed");
         
 		Thread.sleep(1000);
@@ -127,9 +126,9 @@ public class HomePageTest extends Base{
 		
 		String actualSwitch = hp.getSwitchLifx().getText();
 		String expectedSwitch = "LIFX Switch";
-		AssertJUnit.assertEquals(actualSwitch, expectedSwitch);
+		Assert.assertEquals(actualSwitch, expectedSwitch);
 		hp.getSwitchLifx().click();
-		AssertJUnit.assertTrue(hp.getTitle().isDisplayed());
+		Assert.assertTrue(hp.getTitle().isDisplayed());
         log.info("Switch page is displayed");
         
 		Thread.sleep(1000);
@@ -144,9 +143,9 @@ public class HomePageTest extends Base{
 
 		String actualEntertain = hp.getHomeEntertain().getText();
 		String expectedEntertain = "Home Entertainment";
-        AssertJUnit.assertEquals(actualEntertain, expectedEntertain);
+        Assert.assertEquals(actualEntertain, expectedEntertain);
         hp.getHomeEntertain().click();
-        AssertJUnit.assertTrue(hp.getValid().isDisplayed());
+        Assert.assertTrue(hp.getValid().isDisplayed());
         log.info("Home Entertainment page is displayed");
         
         Thread.sleep(1000);
@@ -157,9 +156,9 @@ public class HomePageTest extends Base{
 		
 		String actualGaming = hp.getGaming().getText();
 		String expectedGaming = "Gaming";
-		AssertJUnit.assertEquals(actualGaming, expectedGaming);
+		Assert.assertEquals(actualGaming, expectedGaming);
 		hp.getGaming().click();
-		AssertJUnit.assertTrue(hp.getTitle().isDisplayed());
+		Assert.assertTrue(hp.getTitle().isDisplayed());
         log.info("Gaming page is displayed");
         
         Thread.sleep(1000);
@@ -170,9 +169,9 @@ public class HomePageTest extends Base{
 		
 		String actualTVLight = hp.getTVLight().getText();
 		String expectedTVLight = "TV Lighting";
-		AssertJUnit.assertEquals(actualTVLight, expectedTVLight);
+		Assert.assertEquals(actualTVLight, expectedTVLight);
 		hp.getTVLight().click();
-		AssertJUnit.assertTrue(hp.getTitle().isDisplayed());
+		Assert.assertTrue(hp.getTitle().isDisplayed());
         log.info("TV Lighting page is displayed");
         
 		Thread.sleep(1000);

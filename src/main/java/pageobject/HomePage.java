@@ -25,6 +25,8 @@ public class HomePage {
     private By gaming = By.linkText("Gaming");
     private By tvLighting = By.linkText("TV Lighting");
     private By titleDisplay = By.xpath("//h2[@class='h1 hero__title']");
+    private By entertainBundle = By.xpath("//div[@class='grid grid--uniform aos-init aos-animate']//div[1]//div[1]//a[1]//div[1]//div[1]//img[1]");
+    
     
 	public WebElement getLogoLifx() {
 		return driver.findElement(logoLIFX);
@@ -86,6 +88,10 @@ public class HomePage {
 	public WebElement getTitle() {
 		return driver.findElement(titleDisplay);
 		
+	}
+	
+	public WebElement getEntertainBundle() {
+		return driver.findElement(entertainBundle);
 	}
 
 
